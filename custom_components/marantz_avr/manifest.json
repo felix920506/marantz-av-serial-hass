@@ -1,0 +1,13 @@
+{
+  "domain": "marantz_avr",
+  "name": "Marantz AVR (RS-232C / IP)",
+  "codeowners": ["@felix920506"],
+  "config_flow": true,
+  "documentation": "https://github.com/felix920506/marantz-av-serial-hass",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/felix920506/marantz-av-serial-hass/issues",
+  "loggers": ["custom_components.marantz_avr"],
+  "requirements": ["pyserial-asyncio-fast>=0.11"],
+  "version": "0.1.0"
+}

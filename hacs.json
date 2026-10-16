@@ -1,0 +1,5 @@
+{
+  "name": "Marantz AVR (RS-232C / IP)",
+  "homeassistant": "2025.1.0",
+  "render_readme": true
+}

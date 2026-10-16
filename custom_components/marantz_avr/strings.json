@@ -1,0 +1,73 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to your Marantz receiver",
+        "description": "Choose how Home Assistant talks to the receiver.",
+        "menu_options": {
+          "network": "Network (telnet, TCP port 23)",
+          "serial": "RS-232C (serial port or serial server)"
+        }
+      },
+      "reconfigure": {
+        "title": "Change connection",
+        "menu_options": {
+          "network": "Network (telnet, TCP port 23)",
+          "serial": "RS-232C (serial port or serial server)"
+        }
+      },
+      "network": {
+        "title": "Network connection",
+        "description": "Set the receiver's Network > Network Control option to \"Always On\" so it can be turned on from standby.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "IP address or host name of the receiver.",
+          "port": "Telnet control port (23 by default)."
+        }
+      },
+      "serial": {
+        "title": "RS-232C connection",
+        "description": "9600 baud, 8N1.",
+        "data": {
+          "serial_url": "Serial port or URL"
+        },
+        "data_description": {
+          "serial_url": "A local device such as /dev/ttyUSB0, or a pyserial URL such as socket://192.168.1.10:4001 (raw TCP serial server) or rfc2217://192.168.1.10:4001."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect, or the receiver did not respond.",
+      "invalid_url": "Invalid serial port URL.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This connection is already configured.",
+      "reconfigure_successful": "The connection was updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Input sources",
+        "data": {
+          "sources": "Sources shown in the source list"
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "not_connected": {
+      "message": "The receiver is not connected."
+    },
+    "cannot_connect": {
+      "message": "Could not connect to the receiver: {error}"
+    },
+    "invalid_source": {
+      "message": "Unknown source: {source}"
+    }
+  }
+}
